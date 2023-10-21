@@ -86,7 +86,6 @@ function promedioResultadosTest(resultadosTest) {
   // Itera (en un bucle) los elementos del arreglo y devuelve el promedio de las notas.
    // Tu código:
    
-   
 }
 
 function numeroMasGrande(arrayOfNums) {
