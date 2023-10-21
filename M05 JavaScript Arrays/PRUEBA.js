@@ -1,9 +1,6 @@
-function dePalabrasAFrase(palabras) {
-  // El argumento "palabras" es un arreglo de strings.
-  // Retornar un string donde todas las palabras estén concatenadas
-  // con un espacio entre cada palabra.
-  // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'.
-  // Tu código:
-  return palabras.join("  ");
+function promedioResultadosTest(resultadosTest) {
+  // El parámetro "resultadosTest" es un arreglo de números.
+  // Itera (en un bucle) los elementos del arreglo y devuelve el promedio de las notas.
+    // Tu código:
+    for (i = 0;i<)
 }
-console.log(dePalabrasAFrase(["Hola", "Mundo!"]));
