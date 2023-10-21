@@ -199,16 +199,16 @@
 
 //! Arguments
 
-function saludar(nombre, apellido) {
-  console.log("Hola,", nombre, apellido);
-  console.log(arguments);
-  console.log(arguments[0]);
-  console.log(arguments[1]);
-  console.log(arguments.length);
+// function saludar(nombre, apellido) {
+//   console.log("Hola,", nombre, apellido);
+// console.log(arguments);
+// console.log(arguments[0]);
+// console.log(arguments[1]);
+// console.log(arguments.length);
 
-  for (var i = 0; i < arguments.length; i++) {
-    console.log(arguments[i]);
-  }
-}
+//   for (var i = 0; i < arguments.length; i++) {
+//     console.log(arguments[i]);
+//   }
+// }
 
-saludar("Alejo", "Mejia");
+// saludar("Alejo", "Mejia");
