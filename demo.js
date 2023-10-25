@@ -212,3 +212,77 @@
 // }
 
 // saludar("Alejo", "Mejia");
+
+//! Objetos
+
+var usuario = {
+  nombre: "Daniel",
+  edad: 31,
+  email: "Bardanii7@gmail.com",
+  pais: "Argentino",
+  instructor: true,
+  password: "chao123",
+};
+
+// console.log(usuario);
+
+//? Acceder
+
+//dot(punto)
+
+// console.log(usuario.nombre);
+// console.log(usuario.instructor);
+
+//? Bracket
+
+// console.log(usuario["email"]);
+// console.log(usuario["pais"]);
+// console.log(usuario["password"]);
+
+//Asignar y modificar
+
+//dot
+
+usuario.telefono = 3764608249;
+usuario.pais = "Peru";
+
+//bracket
+
+var password = "hola123";
+
+usuario["estrato"] = 3;
+usuario["password"] = "mail123";
+usuario[password] = "mail321";
+
+//eliminar
+
+//dor
+delete usuario.password;
+//bracket
+delete usuario["email"];
+
+//metodo
+
+usuario.saludar = function (nombre) {
+  console.log(
+    "Hola me llamo..." + this.nombre + " tengo " + this.edad + " años"
+  );
+};
+
+usuario.saludar("Luis");
+
+usuario.despedir = function () {
+  this.saludar = function () {
+    console.log("soy de " + this.pais + ", " + " Chao me voy");
+  };
+};
+usuario.pais = "Argentina";
+usuario.despedir();
+usuario.saludar();
+
+//hasOwnProperty
+
+// console.log(usuario.hasOwnProperty("profesion"));
+// console.log(usuario.hasOwnProperty("pais"));
+
+// console.log(usuario);
