@@ -144,7 +144,7 @@
 //! Map
 // var numeros = [2, 4, 6, 8, 10];
 
-// Primera forma
+// ?Primera forma
 
 // var dobles = numeros.map(function (numero) {
 //   return numero * 2;
@@ -153,7 +153,7 @@
 // console.log(dobles);
 // console.log(numeros);
 
-// Forma dos (callback)
+// ?Forma dos (callback)
 // var autos = ["Ford", "Chevrolet", "Toyota", "Audi", "Mazda"];
 
 // function venderAuto(auto) {
@@ -228,7 +228,7 @@
 
 //? Acceder
 
-//dot(punto)
+//?dot(punto)
 
 // console.log(usuario.nombre);
 // console.log(usuario.instructor);
@@ -239,14 +239,14 @@
 // console.log(usuario["pais"]);
 // console.log(usuario["password"]);
 
-//Asignar y modificar
+//?Asignar y modificar
 
-//dot
+//?dot
 
 // usuario.telefono = 3764608249;
 // usuario.pais = "Peru";
 
-//bracket
+//?bracket
 
 // var password = "hola123";
 
@@ -261,7 +261,7 @@
 //bracket
 // delete usuario["email"];
 
-//metodo
+//?metodo
 
 // usuario.saludar = function (nombre) {
 //   console.log(
@@ -286,3 +286,116 @@
 // console.log(usuario.hasOwnProperty("pais"));
 
 // console.log(usuario);
+
+//!CLASS (Clases)
+
+//? Primera Forma (Funcion Constructora)
+// function carro(marca, color, precio) {
+//   this.marca = marca;
+//   this.color = color;
+//   this.precio = precio;
+//   this.identificacion = function () {
+//     return "Hola soy un " + this.marca + " y valgo " + this.precio;
+//   };
+// }
+//Instancia
+// var auto1 = new carro("Audi", "Negro", 15000);
+// console.log(auto1.color);
+// console.log(auto1.marca);
+// console.log(auto1.identificacion());
+
+// var auto2 = new carro("Nissan", "Gris", 10000);
+// console.log(auto2.identificacion());
+
+// console.log(auto1);
+// console.log(auto2);
+
+//? Segunda forma (Class)
+
+// class Carro {
+//   constructor(marca, color, precio) {
+//     this.marca = marca;
+//     this.color = color;
+//     this.precio = precio;
+//   }
+//   identificacion = function () {
+//     return "Hola soy un " + this.marca + " y valgo " + this.precio;
+//   };
+// }
+
+//? Instancia
+// var auto3 = new Carro("Renault", "Blanco", 20000);
+// var auto4 = new Carro("Ferrari", "Rojo", 60000);
+
+// console.log(auto4.identificacion());
+
+//!Prototipo
+
+// Carro.prototype.modelo = function () {
+//   console.log(
+//     "Hola soy un " + this.marca + " y valgo " + this.precio + " y soy modelo 74"
+//   );
+// };
+// console.log(auto3.modelo());
+
+// console.log(typeof arguments);
+
+//! OBJECT.create
+
+//! HERENCIA
+
+// class Animal {
+//   constructor(nombre, especie) {
+//     this.nombre = nombre;
+//     this.especie = especie;
+//   }
+//   saludar() {
+//     console.log("Hola me llamo " + this.nombre);
+//   }
+// }
+
+// var caballito = new Animal("Manolo", "Mamifero");
+
+// console.log(caballito);
+// console.log(caballito.saludar());
+
+//?Clase heredada o que herede de Animal
+
+// class Gato extends Animal {
+//   constructor(nombre, especie, color, peso) {
+//     super(nombre, especie);
+//     this.color = color;
+//     this.peso = peso;
+//   }
+//   maullar() {
+//     console.log("Meow!");
+//   }
+// }
+
+// var gato1 = new Gato("Felix", "Mamifero", "Naranja", "2Kg");
+// console.log(gato1);
+
+// console.log(gato1.color);
+// console.log(gato1.peso);
+// console.log(gato1.especie);
+
+// gato1.saludar();
+// gato1.maullar();
+
+//!CALLBACKS
+
+function decirHolaAlUsuario(usuario) {
+  return "Hola " + usuario + "!";
+}
+
+function decirAdiosAlUsuario(usuario) {
+  return "Adios " + usuario + "!";
+}
+
+function crearSaludo(usuario, cb) {
+  return cb(usuario);
+}
+
+console.log(crearSaludo("Daniel", decirAdiosAlUsuario));
+
+console.log(crearSaludo("Angel", decirAdiosAlUsuario));
