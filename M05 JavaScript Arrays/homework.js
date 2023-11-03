@@ -29,12 +29,6 @@ function incrementarPorUno(array) {
     arrayIncrementado.push(array[i] + 1);
   }
   return arrayIncrementado;
-
-  //!.map
-  //?   var arrayNuevo = array.map(function(numero){
-  //?   return numero = numero + 1;
-  //?   })
-  //?  return arrayNuevo;
 }
 
 function agregarItemAlFinalDelArray(array, elemento) {
@@ -60,12 +54,6 @@ function dePalabrasAFrase(palabras) {
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'.
   // Tu código:
   return palabras.join(" ");
-
-  //!Reduce
-  //var fraseCompleta = palabras.reduce(function(acc, palabra){
-  //return acc + " " + palabra;
-  //})
-  //return fraseCompleta;
 }
 
 function arrayContiene(array, elemento) {
@@ -78,34 +66,17 @@ function arrayContiene(array, elemento) {
     }
   }
   return false;
-
-  //! FOR
-  // for (i = 0; i < array.length; i++) {
-  //   if (array[i] === elemento) return true;
-  // }
-  // return false;
 }
-// console.log(arrayContiene([1, 4, 6, 8, 21], 5));
 
 function agregarNumeros(arrayOfNums) {
   // El parámetro "arrayOfNums" debe ser un arreglo de números.
   // Suma todos los elementos y retorna el resultado.
   // Tu código:
-
-  //!CALLBACK
-
   function sumar(a, b) {
     return a + b;
   }
   var totalSuma = arrayOfNums.reduce(sumar);
   return totalSuma;
-
-  //! FORMA PRIMERA
-  // const suma = arrayOfNums.reduce(function (acumulador, numero) {
-  //   return acumulador + numero;
-  // }, 0);
-
-  // return suma;
 }
 
 function promedioResultadosTest(resultadosTest) {
@@ -124,11 +95,8 @@ function promedioResultadosTest(resultadosTest) {
 
   return promedio;
 }
-// console.log(promedioResultadosTest([1, 4, 6, 8, 21]));
 
 function numeroMasGrande(arrayOfNums) {
-  //[1, 4, 6, 8, 21];
-  //
   // El parámetro "arrayOfNums" es un arreglo de números.
   // Retornar el número más grande.
   // Tu código:
@@ -142,7 +110,6 @@ function numeroMasGrande(arrayOfNums) {
   });
   return mayorNum;
 }
-// console.log(numeroMasGrande([1, 4, 6, 8, 21]));
 
 function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto.
@@ -266,7 +233,19 @@ function breakStatement(num) {
   // [PISTA]: utiliza el statement 'break'.
   // Tu código:
   var arreglo = [];
-  
+  var suma = num;
+  for (i = 0; i < 10; i++) {
+    suma += 2;
+    if (suma === i) break;
+    else {
+      arreglo.push(suma);
+    }
+  }
+  if (i < 10) {
+    return "Se interrumpió la ejecución";
+  } else {
+    return arreglo;
+  }
 }
 
 function continueStatement(num) {
@@ -276,7 +255,21 @@ function continueStatement(num) {
   // se continua con la siguiente iteración.
   // [PISTA]: utiliza el statement 'continue'.
   // Tu código:
+  
+  var array = [];
+  var suma = num;
+  for (i = 0; i < 10; i++) {
+    if (i === 5) {
+      continue;
+    }
+    suma += 2;
+    array.push(suma);
+  }
+  return array;
 }
+
+// var prueba = continueStatement(2);
+// console.log(prueba);
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
 module.exports = {
