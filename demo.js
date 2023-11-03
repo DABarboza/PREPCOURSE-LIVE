@@ -261,7 +261,7 @@
 //bracket
 // delete usuario["email"];
 
-//?metodo
+//?METODO
 
 // usuario.saludar = function (nombre) {
 //   console.log(
@@ -280,7 +280,7 @@
 // usuario.despedir();
 // usuario.saludar();
 
-//hasOwnProperty
+//!hasOwnProperty
 
 // console.log(usuario.hasOwnProperty("profesion"));
 // console.log(usuario.hasOwnProperty("pais"));
